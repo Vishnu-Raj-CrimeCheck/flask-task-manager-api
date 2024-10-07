@@ -25,8 +25,34 @@ The **Flask Task Manager API** is a simple and scalable task management API buil
 - **SQLAlchemy**: ORM for database interactions.
 - **Flask-Migrate**: For handling database migrations.
 - **SQLite**: Database (can be swapped with PostgreSQL).
-- **Gunicorn**: WSGI server for deployment.
 
+---
+## Setup Instructions
+
+### 1. Clone the Repository
+> git clone https://github.com/yourusername/flask-task-manager-api.git
+> cd flask-task-manager-api
+
+### 2. Set Up a Virtual Environment
+> python -m venv venv
+> source venv/bin/activate  
+
+### 3. Install Dependencies
+> pip install -r requirements.txt
+
+### 4. Set Environment Variables
+> FLASK_APP=app
+> FLASK_ENV=development
+> JWT_SECRET_KEY=your_secret_key
+
+### 5. Initialize the Database
+> flask db init
+> flask db migrate -m "Initial migration"
+> flask db upgrade
+
+### 6.  Run the Application
+> flask run
+The app will be running at http://127.0.0.1:5000/.
 ---
 
 ## Endpoints

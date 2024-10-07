@@ -10,12 +10,6 @@ jwt = JWTManager(app)
 
 api.add_resource(TaskResource, '/tasks', '/tasks/<int:task_id>', endpoint='task_resource')
 api.add_resource(AuthResource, '/auth', endpoint='auth_resource')
-
-# api.add_resource(TaskResource, '/tasks')
-# api.add_resource(AuthResource, '/auth')
-# api.add_resource(TaskResource, '/tasks', '/tasks/<int:task_id>')  # Add <int:task_id> to capture task ID
-
-
 api.init_app(app)
 
 if __name__ == '__main__':
